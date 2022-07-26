@@ -1,44 +1,54 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { auth, signOut  } from '../firebase/init'
+import { auth, signOut } from '../firebase/init'
 import { withRouter } from 'react-router-dom'
 
 
 
 const Navbar = (props) => {
 
-    const cerrarSesion = ()=>{
+    const cerrarSesion = () => {
         signOut(auth)
-        .then(()=>{
-            props.history.push('/login')
-        })
+            .then(() => {
+                props.history.push('/login')
+            })
     }
 
     return (
-        <div className='navbar navbar-dark bg-dark'>
+        <div className='navbar'>
             <Link className='navbar-brand' to="/">VERDEN FOOD</Link>
             <div>
                 <div className='d-flex'>
-                    <NavLink className="btn btn-dark mrg-2" to="/" exact>
+                    {/* <NavLink className="btn btn-dark mrg-2" to="/" exact>
                         Inicio
-                    </NavLink>
+                    </NavLink> */}
                     {
                         props.firebaseUser !== null ? (
-                            <NavLink className="btn btn-dark mrg-2" to="/admin">
-                        Admin
-                    </NavLink>
+                            <NavLink className="btn btn-light mrg-2" to="/admin">
+                                Admin
+                            </NavLink>
                         ) : null
                     }
-                   
+
                     {
-                        props.firebaseUser !== null ?(
-                            <button className="btn btn-dark" onClick={()=> cerrarSesion()} >Cerrar Sesión</button>
-                        ) : (
-                            <NavLink className="btn btn-dark mrg-2" to="/login">
-                            Login
+                        props.firebaseUser !== null ? (
+                            <NavLink className="btn btn-light mrg-2" to="/welcome">
+                                Soy Chef
                             </NavLink>
+                        ) : null
+                    }
+
+                    {
+                        props.firebaseUser !== null ? (
+                            <button className="btn btn-light" onClick={() => cerrarSesion()} >Cerrar Sesión</button>
+                        ) : (
+                            <NavLink className="btn btn-light mrg-2" to="/login">
+                                Login
+                            </NavLink>
+
                         )
                     }
+
                 </div>
             </div>
         </div>
