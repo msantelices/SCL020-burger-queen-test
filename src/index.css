@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Open+Sans:wght@500&display=swap');
+
+.navbar {
+    background-color: #2d617d;
+}
+
+.btn {
+    color: black;
+}
+
+.containerbtnChef {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15%;
+    height: 600px;
+    outline: 2px solid red;
+}
+
+.btnCheffunction {
+    background-color: #2D617D;
+    display: flex;
+    align-items: center;
+    border-radius: 16%;
+    height: 360px;
+    outline: 2px solid red;
+}
+
+.sticker-fit {
+    width: 280px;
+    height: 280px;
+}
+
+.textFunctionbtn {
+    position: relative;
+    font-size: 30px;
+    top: 250px;
+    right: 200px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    /* outline: 2px solid red; */
+}
