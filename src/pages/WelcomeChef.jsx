@@ -1,23 +1,27 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import ViewOrder from '../stickers/VIEW-ORDER.png'
 import InKitchen from '../stickers/IN-KITCHEN.png'
 
-const WelcomeChef = () => {
+const WelcomeChef = (props) => {
 
-    // const viewOrderbtn = './stickers/VIEW-ORDER.png'
+    const goTOKitchenOrders = () => {
+        props.history.push('/inKitchen')
+    }
 
     return (
-        <div className='containerbtnChef'>
+        <div className='containerbtn'>
             <div className='btnCheffunction'>
                 <img src={ViewOrder} className="sticker-fit" />
             </div>
             <div className='textFunctionbtn'>VER PEDIDOS</div>
-            <div className='btnCheffunction'>
+            <div className='btnCheffunction' onClick={() => goTOKitchenOrders()}>
                 <img src={InKitchen} className="sticker-fit" />
             </div>
             <div className='textFunctionbtn'>EN COCINA</div>
+
         </div>
     )
 }
 
-export default WelcomeChef
+export default withRouter(WelcomeChef)
