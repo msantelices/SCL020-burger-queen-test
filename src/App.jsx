@@ -5,6 +5,7 @@ import Admin from "./components/Admin";
 import Login from "./components/Login";
 import Navbar from './components/Navbar'
 import WelcomeChef from "./components/WelcomeChef";
+import MakeOrder from "./components/MakeOrder";
 
 
 
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path="/welcome">
             <WelcomeChef />
+          </Route>
+          <Route path="/makeorder">
+            <MakeOrder />
           </Route>
         </Switch>
       </div>

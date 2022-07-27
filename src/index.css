@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Open+Sans:wght@500&display=swap');
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .navbar {
     background-color: #2d617d;
 }
@@ -10,7 +16,9 @@
 
 .containerbtnChef {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 15%;
     height: 600px;
@@ -33,11 +41,45 @@
 
 .textFunctionbtn {
     position: relative;
-    font-size: 30px;
     top: 250px;
     right: 200px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     text-align: center;
     /* outline: 2px solid red; */
+}
+
+/*template sleccion de mesa*/
+
+.containerOrder {
+    display: flex;
+    flex-direction: column;
+}
+
+.textSelectTable {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 45px;
+    position: relative;
+    top: 40px;
+    height: 180px;
+
+}
+
+.containerCircles {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    outline: 2px solid red;
+}
+
+.circleTable {
+    position: relative;
+    background-color: #5FC2BC;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    outline: 2px solid red;
 }
