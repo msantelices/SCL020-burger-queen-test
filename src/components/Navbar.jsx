@@ -23,25 +23,17 @@ const Navbar = (props) => {
                         Inicio
                     </NavLink> */}
                     {
-                        props.firebaseUser !== null ? (
-                            <NavLink className="btn btn-light mrg-2" to="/admin">
-                                Admin
+                        props.firebaseUser !== null && props.firebaseUser.email === 'soychef@verdenfood.cl' ? (
+                            <NavLink className="btn btn-light mrg-2" to="/welcomechef">
+                                Inicio Chef
                             </NavLink>
                         ) : null
                     }
 
                     {
-                        props.firebaseUser !== null ? (
-                            <NavLink className="btn btn-light mrg-2" to="/welcome">
-                                Soy Chef
-                            </NavLink>
-                        ) : null
-                    }
-
-                    {
-                        props.firebaseUser !== null ? (
-                            <NavLink className="btn btn-light mrg-2" to="/makeorder">
-                                Haciendo Orden
+                        props.firebaseUser !== null && props.firebaseUser.email === 'soycamarero@verdenfood.cl' ? (
+                            <NavLink className="btn btn-light mrg-2" to="/welcomewaiter">
+                                Soy Mesonero
                             </NavLink>
                         ) : null
                     }
@@ -55,8 +47,8 @@ const Navbar = (props) => {
                             </NavLink>
 
                         )
-                    }
 
+                    }
                 </div>
             </div>
         </div>

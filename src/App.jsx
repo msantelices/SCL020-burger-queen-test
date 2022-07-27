@@ -1,11 +1,13 @@
 import React from "react";
 import { auth, onAuthStateChanged } from "./firebase/init";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Admin from "./components/Admin";
-import Login from "./components/Login";
+import Admin from "./pages/Admin";
+import Login from "./pages/Login";
 import Navbar from './components/Navbar'
-import WelcomeChef from "./components/WelcomeChef";
-import MakeOrder from "./components/MakeOrder";
+import WelcomeChef from "./pages/WelcomeChef";
+import MakeOrder from "./pages/MakeOrder";
+import WelcomeWaiter from "./pages/WelcomeWaiter";
+import KitchenOrders from "./pages/KitchenOrders";
 
 
 
@@ -40,11 +42,17 @@ function App() {
           <Route path="/admin">
             <Admin />
           </Route>
-          <Route path="/welcome">
+          <Route path="/welcomechef">
             <WelcomeChef />
           </Route>
           <Route path="/makeorder">
             <MakeOrder />
+          </Route>
+          <Route path="/welcomewaiter">
+            <WelcomeWaiter />
+          </Route>
+          <Route path="/inkitchen">
+            <KitchenOrders />
           </Route>
         </Switch>
       </div>
