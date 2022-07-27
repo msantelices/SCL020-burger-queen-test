@@ -40,6 +40,14 @@ const Navbar = (props) => {
 
                     {
                         props.firebaseUser !== null ? (
+                            <NavLink className="btn btn-light mrg-2" to="/makeorder">
+                                Haciendo Orden
+                            </NavLink>
+                        ) : null
+                    }
+
+                    {
+                        props.firebaseUser !== null ? (
                             <button className="btn btn-light" onClick={() => cerrarSesion()} >Cerrar Sesión</button>
                         ) : (
                             <NavLink className="btn btn-light mrg-2" to="/login">
