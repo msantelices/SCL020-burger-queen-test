@@ -16,7 +16,7 @@ const Navbar = (props) => {
 
     return (
         <div className='navbar'>
-            <Link className='navbar-brand' to="/">VERDEN FOOD</Link>
+            <p className='navbar-brand' >VERDEN FOOD</p>
             <div>
                 <div className='d-flex'>
                     {/* <NavLink className="btn btn-dark mrg-2" to="/" exact>
