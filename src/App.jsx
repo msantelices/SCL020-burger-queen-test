@@ -8,6 +8,7 @@ import WelcomeChef from "./pages/WelcomeChef";
 import MakeOrder from "./pages/MakeOrder";
 import WelcomeWaiter from "./pages/WelcomeWaiter";
 import KitchenOrders from "./pages/KitchenOrders";
+import MenuView from "./pages/MenuView";
 
 
 
@@ -53,6 +54,9 @@ function App() {
           </Route>
           <Route path="/inkitchen">
             <KitchenOrders />
+          </Route>
+          <Route path="/menu">
+            <MenuView />
           </Route>
         </Switch>
       </div>
