@@ -1,6 +1,7 @@
 import React from 'react'
 import { auth, createUserWithEmailAndPassword, db, addDoc, collection, signInWithEmailAndPassword } from '../firebase/init'
 import { withRouter } from 'react-router-dom'
+import Logo from '../components/Logo'
 
 
 
@@ -102,6 +103,9 @@ const Login = (props) => {
 
     return (
         <div className='mt-5'>
+            <div className="logodiv">
+                < Logo />
+            </div>
             <h3 className="text-center">
                 {
                     esRegistro ? 'Registro de usuario' : 'Login de acceso'
@@ -132,17 +136,17 @@ const Login = (props) => {
                             onChange={e => setPass(e.target.value)}
                             value={pass}
                         />
-                        <button className="btn btn-dark btn-lg w-100 mb-2" type='submit'>
+                        <button className="btn btn-info btn-lg w-100 mb-2" type='submit'>
                             {
                                 esRegistro ? 'Registrarse' : 'Acceder'
                             }
                         </button>
-                        <button type='button' className="btn btn-info btn-sm w-100"
+                        {/* <button type='button' className="btn btn-info btn-sm w-100"
                             onClick={() => setEsRegistro(!esRegistro)} >
                             {
                                 esRegistro ? '¿Ya estas registrado?' : '¿No tienes cuenta?'
                             }
-                        </button>
+                        </button> */}
                     </form>
                 </div>
             </div>
