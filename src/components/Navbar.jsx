@@ -5,12 +5,12 @@ import { withRouter } from 'react-router-dom'
 
 
 
-const Navbar = (props) => {
+const Navbar = ({history, firebaseUser}) => {
 
     const cerrarSesion = () => {
         signOut(auth)
             .then(() => {
-                props.history.push('/login')
+                history.push('/login')
             })
     }
 
@@ -23,7 +23,7 @@ const Navbar = (props) => {
                         Inicio
                     </NavLink> */}
                     {
-                        props.firebaseUser !== null && props.firebaseUser.email === 'soychef@verdenfood.cl' ? (
+                        firebaseUser !== null && firebaseUser.email === 'soychef@verdenfood.cl' ? (
                             <NavLink className="btn btn-light mrg-2" to="/welcomechef">
                                 Inicio Chef
                             </NavLink>
@@ -31,7 +31,7 @@ const Navbar = (props) => {
                     }
 
                     {
-                        props.firebaseUser !== null && props.firebaseUser.email === 'soycamarero@verdenfood.cl' ? (
+                        firebaseUser !== null && firebaseUser.email === 'soymesonero@verdenfood.cl' ? (
                             <NavLink className="btn btn-light mrg-2" to="/welcomewaiter">
                                 Soy Mesonero
                             </NavLink>
@@ -39,7 +39,7 @@ const Navbar = (props) => {
                     }
 
                     {
-                        props.firebaseUser !== null ? (
+                        firebaseUser !== null ? (
                             <button className="btn btn-light" onClick={() => cerrarSesion()} >Cerrar Sesión</button>
                         ) : (
                             <NavLink className="btn btn-light mrg-2" to="/login">
