@@ -5,7 +5,7 @@ import Logo from '../components/Logo'
 
 
 
-const Login = (props) => {
+const Login = ({history}) => {
 
     const [email, setEmail] = React.useState('')
     const [pass, setPass] = React.useState('')
@@ -50,9 +50,9 @@ const Login = (props) => {
             setError(null)
 
             if (response.user.email === 'soychef@verdenfood.cl') {
-                props.history.push('/welcomechef')
-            } else if (response.user.email === 'soycamarero@verdenfood.cl') {
-                props.history.push('/welcomewaiter')
+                history.push('/welcomechef')
+            } else if (response.user.email === 'soymesonero@verdenfood.cl') {
+                history.push('/welcomewaiter')
             }
 
         } catch (error) {
@@ -67,7 +67,7 @@ const Login = (props) => {
                 setError('Correo no registrado')
             }
         }
-    }, [email, pass, props.history])
+    }, [email, pass, history])
 
     //----Para crear usuario----
     const registrar = React.useCallback(async () => {
@@ -86,7 +86,7 @@ const Login = (props) => {
             setEmail('')
             setPass('')
             setError(null)
-            props.history.push('/admin')
+            history.push('/admin')
 
         } catch (error) {
             console.log(error.message)
@@ -98,7 +98,7 @@ const Login = (props) => {
             }
 
         }
-    }, [email, pass, props.history])
+    }, [email, pass, history])
 
 
     return (

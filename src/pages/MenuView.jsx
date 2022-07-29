@@ -1,17 +1,10 @@
 import React from 'react'
+import Menu from '../components/Menu'
 
 const MenuView = () => {
     return (
         <div className='containerAllPageMenu'>
-            <div className='textTitleMenu'>
-                <h1>MENU</h1>
-                <h3>mesa</h3>
-            </div>
-
-            {/* <div className='containerMenu'>
-            ETIQUETA MENU COMPONENTE
-        </div> */}
-
+            <Menu />
         </div>
     )
 }
