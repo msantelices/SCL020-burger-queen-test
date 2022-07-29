@@ -2,7 +2,7 @@ import React from 'react'
 import { auth } from '../firebase/init'
 import { withRouter } from 'react-router-dom'
 
-const Admin = (props) => {
+const Admin = ({history}) => {
 
     const [user, setUser] = React.useState(null)
 
@@ -12,9 +12,9 @@ const Admin = (props) => {
             setUser(auth.currentUser)
         } else {
             console.log('No existe un usuario')
-            props.history.push('/login')
+            history.push('/login')
         }
-    }, [props.history])
+    }, [history])
 
     return (
         <div>

@@ -3,10 +3,10 @@ import ViewOrder from '../stickers/VIEW-ORDER.png'
 import MakeOrder from '../stickers/STICKER-CREAT-ORDER.png'
 import { withRouter } from 'react-router-dom'
 
-const WelcomeWaiter = (props) => {
+const WelcomeWaiter = ({history}) => {
 
     const goToMakeOrder = ()=>{
-        props.history.push('/makeorder')
+        history.push('/makeorder')
     }
 
     return (

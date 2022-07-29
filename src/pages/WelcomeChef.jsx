@@ -3,10 +3,10 @@ import { withRouter } from 'react-router-dom'
 import ViewOrder from '../stickers/VIEW-ORDER.png'
 import InKitchen from '../stickers/IN-KITCHEN.png'
 
-const WelcomeChef = (props) => {
+const WelcomeChef = ({history}) => {
 
     const goTOKitchenOrders = () => {
-        props.history.push('/inKitchen')
+        history.push('/inKitchen')
     }
 
     return (
