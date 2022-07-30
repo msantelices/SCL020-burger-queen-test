@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState, useCallback} from 'react'
 import { auth, createUserWithEmailAndPassword, db, addDoc, collection, signInWithEmailAndPassword } from '../firebase/init'
 import { withRouter } from 'react-router-dom'
 import Logo from '../components/Logo'
@@ -7,10 +7,10 @@ import Logo from '../components/Logo'
 
 const Login = ({history}) => {
 
-    const [email, setEmail] = React.useState('')
-    const [pass, setPass] = React.useState('')
-    const [error, setError] = React.useState(null)
-    const [esRegistro, setEsRegistro] = React.useState(false)
+    const [email, setEmail] = useState('')
+    const [pass, setPass] = useState('')
+    const [error, setError] = useState(null)
+    const [esRegistro, setEsRegistro] = useState(false)
 
     const procesarDatos = e => {
         e.preventDefault()
@@ -40,7 +40,7 @@ const Login = ({history}) => {
     }
 
     //----Para logear al usuario----
-    const login = React.useCallback(async () => {
+    const login = useCallback(async () => {
         try {
             const response = await signInWithEmailAndPassword(auth, email, pass)
             console.log(response.user)
@@ -70,7 +70,7 @@ const Login = ({history}) => {
     }, [email, pass, history])
 
     //----Para crear usuario----
-    const registrar = React.useCallback(async () => {
+    const registrar = useCallback(async () => {
         try {
             const response = await createUserWithEmailAndPassword(auth, email, pass)
             await addDoc(collection(db, 'user'), {

@@ -1,7 +1,6 @@
 import React from "react";
 import { auth, onAuthStateChanged } from "./firebase/init";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import Navbar from './components/Navbar'
 import WelcomeChef from "./pages/WelcomeChef";
@@ -9,6 +8,7 @@ import MakeOrder from "./pages/MakeOrder";
 import WelcomeWaiter from "./pages/WelcomeWaiter";
 import KitchenOrders from "./pages/KitchenOrders";
 import MenuView from "./pages/MenuView";
+import PrivateRoutes from "./components/PrivateRoutes";
 
 
 
@@ -34,15 +34,13 @@ function App() {
       <div className="container">
         <Navbar firebaseUser={firebaseUser} />
         <Switch>
-          {/* <Route path="/" exact>
-        inicio...
-      </Route> */}
-          <Route path="/login">
+        <Route path="/login">
             <Login />
           </Route>
-          <Route path="/admin">
-            <Admin />
-          </Route>
+            {/* <Route path="/" exact>
+        inicio...
+      </Route> */}
+      <PrivateRoutes>
           <Route path="/welcomechef">
             <WelcomeChef />
           </Route>
@@ -58,6 +56,7 @@ function App() {
           <Route path="/menu">
             <MenuView />
           </Route>
+          </PrivateRoutes>
         </Switch>
       </div>
     </Router>
