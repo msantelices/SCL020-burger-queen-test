@@ -12,10 +12,10 @@ const WelcomeWaiter = ({history}) => {
     return (
         <div className='containerbtn'>
             <div className='btnCheffunction'>
-                <img src={MakeOrder} className="sticker-fit" />
+                <img src={MakeOrder} className="sticker-fit" onClick={()=>goToMakeOrder()}/>
                 <div className='textFunctionbtn'>REALIZAR PEDIDO</div>
             </div>
-            <div className='btnCheffunction' onClick={()=>goToMakeOrder()} >
+            <div className='btnCheffunction' >
                 <img src={ViewOrder} className="sticker-fit" />
                 <div className='textFunctionbtn'>VER PEDIDOS</div>
             </div>
