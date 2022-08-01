@@ -14,7 +14,7 @@
     /* outline: 2px solid red; */
 }
 
-.navbar-brand{
+.navbar-brand {
     margin-top: 2%;
     margin-left: 3%;
     font-family: 'Open Sans', sans-serif;
@@ -23,27 +23,22 @@
 }
 
 .btn {
-    
     color: rgb(0, 0, 0);
 }
 
 
-.logoverden{
+.logoverden {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 5%;
     width: 80%;
     margin: auto;
-   
     width: 30%;
 }
 
 .containerbtn {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     margin-top: 15%;
     height: 600px;
@@ -52,29 +47,29 @@
 
 .btnCheffunction {
     background-color: #2D617D;
-    display: flex;
     align-items: center;
     border-radius: 16%;
     height: 360px;
+    margin: auto;
     /* outline: 2px solid red; */
 }
 
 .sticker-fit {
     width: 280px;
     height: 280px;
+    margin-top: 30px;
 }
 
 .textFunctionbtn {
-    position: relative;
-    top: 250px;
-    right: 200px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     text-align: center;
+    font-size: 30px;
+    margin-top: 120px;
     /* outline: 2px solid red; */
 }
 
-/*template sleccion de mesa*/
+/* /template sleccion de mesa/ */
 
 .containerOrder {
     display: flex;
@@ -89,15 +84,13 @@
     position: relative;
     top: 40px;
     height: 180px;
-
 }
 
 .containerCircles {
     display: flex;
     justify-content: center;
-    flex-direction: row;
     flex-wrap: wrap;
-    /*outline: 2px solid red;*/
+    /* /outline: 2px solid red;/ */
 }
 
 .circleTable {
@@ -111,11 +104,9 @@
     margin-left: 30px;
     margin-bottom: 30px;
     border: none;
-    /*outline: 2px solid red;*/
 }
 
 .tableNumbers {
-    /*outline: 2px solid red;*/
     margin-top: 5px;
     margin-right: 30px;
     margin-left: 30px;
@@ -129,4 +120,80 @@
 .boton-color:hover {
     background-color: #FF5454;
     transition: 0.4s;
+}
+
+/*MENU CONTAINER*/
+
+.AllContainerMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerMenu {
+    margin-top: 25px;
+    overflow-y: scroll;
+    height: 650px;
+    /*outline: 2px solid red;*/
+}
+
+.textMenuMenu {
+    margin-top: 15px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.textTablesMenu {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+.textTypesMenu {
+    margin-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.containerOptionsMenu {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.textFoodNameMenu {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.containerPriceFoodCountMenu {
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: left;
+}
+
+.containerPriceFoodCountMenu:hover {
+    background-color: #E6D6BE;
+}
+
+.buttonNextMenu {
+    margin-top: 5%;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10%;
+}
+
+/*Button decoration Menu*/
+
+.buttonCountMenu {
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    align-items: center;
 }

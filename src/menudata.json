@@ -1,196 +1,194 @@
-{
-  "menuOptions": [
-    {
-      "id": "01",
-      "name": "Café Americano",
-      "Description": ".......",
-      "type": "drink",
-      "price": "1800",
-      "menu": "day"
-    },
-    {
-      "id": "02",
-      "name": "Café con Leche",
-      "Description": ".......",
-      "type": "drink",
-      "price": "2300",
-      "menu": "day"
-    },
-    {
-      "id": "03",
-      "name": "Agua con Gas",
-      "Description": "Agua natural gasificada",
-      "type": "drink",
-      "price": "1200",
-      "menu": "day"
-    },
-    {
-      "id": "04",
-      "name": "Agua sin Gas",
-      "Description": "Agua natural sin gas",
-      "type": "drink",
-      "price": "1200",
-      "menu": "day"
-    },
-    {
-      "id": "05",
-      "name": "Jugo de naranja",
-      "Description": "Jugo natural de naranja",
-      "type": "drink",
-      "price": "2000",
-      "menu": "day"
-    },
-    {
-      "id": "05",
-      "name": "Jugo de Durazno",
-      "Description": "Jugo natural de durazno",
-      "type": "drink",
-      "price": "2000",
-      "menu": "day"
-    },
-    {
-      "id": "06",
-      "name": "Jugo de Fresa",
-      "Description": "Jugo natural de fresa",
-      "type": "drink",
-      "price": "2000",
-      "menu": "day"
-    },
-    {
-      "id": "07",
-      "name": "Jugo de Mango",
-      "Description": "Jugo natural de mango",
-      "type": "drink",
-      "price": "2000",
-      "menu": "day"
-    },
-    {
-      "id": "08",
-      "name": "Bagel",
-      "Description": "Delicioso pan a base de harina de trigo, relleno de queso crema, tomate y jamon de pavo",
-      "type": "breakfast",
-      "price": "3500",
-      "menu": "day"
-    },
-    {
-      "id": "09",
-      "name": "MediaLuna",
-      "Description": "Panes con masa enriquecida con huevo y mantequilla, en forma de media luna y barnizadas con almíbar",
-      "type": "breakfast",
-      "price": "2000",
-      "menu": "day"
-    },
-    {
-      "id": "10",
-      "name": "MediaLuna",
-      "Description": "Panes con masa enriquecida con huevo y mantequilla, en forma de media luna y barnizadas con almíbar",
-      "type": "breakfast",
-      "price": "2000",
-      "menu": "day"
-    },
-    {
-      "id": "11",
-      "name": "Dona Glaseada",
-      "Description": "Deliciosa y esponjosa dona glaseada con azúcar",
-      "type": "breakfast",
-      "price": "1300",
-      "menu": "day"
-    },
-    {
-      "id": "12",
-      "name": "Arepa Catira",
-      "Description": "Arepa rellena con nuestra mechada de pollo y queso mantecoso rallado",
-      "type": "breakfast",
-      "price": "4800",
-      "menu": "day"
-    },
-    {
-      "id": "12",
-      "name": "Arepa Dominó",
-      "Description": "Arepa rellena con nuestros deliciosos porotos negros y queso blanco llanero rallado",
-      "type": "breakfast",
-      "price": "4800",
-      "menu": "day"
-    },
-    {
-      "id": "13",
-      "name": "Arepa con Jamon y Queso",
-      "Description": "Arepa rellena con jamón cocido, queso gouda",
-      "type": "breakfast",
-      "price": "4800",
-      "menu": "day"
-    },
-    {
-      "id": "14",
-      "name": "Empanada de Jamon y Queso",
-      "Description": "Empanadas rellena con jamón cocido, queso gouda",
-      "type": "breakfast",
-      "price": "2700",
-      "menu": "day"
-    },
-    {
-      "id": "15",
-      "name": "Empanada de Mechada",
-      "Description": "Empanadas rellena de nuestra deliciosa mechada de carne al estilo venezolano",
-      "type": "breakfast",
-      "price": "2700",
-      "menu": "day"
-    },
-    {
-      "id": "16",
-      "name": "Empanada de pollo",
-      "Description": "Empanadas rellena de deliciosa mechada de pollo",
-      "type": "breakfast",
-      "price": "2700",
-      "menu": "day"
-    },
-    {
-      "id": "17",
-      "name": "Pizza Peperoni",
-      "Description": "De crujiente masa y horneada en piedra con peperoni y extra de queso mozarella",
-      "type": "Lunch",
-      "price": "9000",
-      "menu": "day"
-    },
-    {
-      "id": "18",
-      "name": "Pizza Napolitana",
-      "Description": "De crujiente masa y horneada en piedra con tomate, oregano y extra de queso mozarella",
-      "type": "Lunch",
-      "price": "9000",
-      "menu": "day"
-    },
-    {
-      "id": "19",
-      "name": "Pizza Napolitana",
-      "Description": "Es una de las pizzas más demandadas de masa crujiente y esponjosa con una base de queso fundido y tomate que se aliñan con jamón y piña",
-      "type": "Lunch",
-      "price": "9800",
-      "menu": "day"
-    },
-    {
-      "id": "20",
-      "name": "Hamburguesa de Vacuno",
-      "Description": "Delicioso sandwich de pan brioche rellena de nuestra sazonada carne de vacuno molida, con tomate, cebolla, pepinillos y queso cheddar",
-      "type": "Lunch",
-      "price": "7500",
-      "menu": "day"
-    },
-    {
-      "id": "21",
-      "name": "Hamburguesa de Pollo",
-      "Description": "Delicioso sandwich de pan brioche rellena de pollo con tomate, cebolla, pepinillos y queso cheddar",
-      "type": "Lunch",
-      "price": "7500",
-      "menu": "day"
-    },
-    {
-      "id": "22",
-      "name": "Hamburguesa vegana de Seitán",
-      "Description": "El seitán es un excelente alimento rico en proteínas, 0% de colesterol, digestivo y natural. se elabora a base de gluten de trigo, con lechuga y tomate",
-      "type": "Lunch",
-      "price": "6000",
-      "menu": "day"
-    }
-  ]
-}
+[
+  {
+    "id": "01",
+    "name": "Café Americano",
+    "Description": ".......",
+    "type": "drink",
+    "price": "1800",
+    "menu": "day"
+  },
+  {
+    "id": "02",
+    "name": "Café con Leche",
+    "Description": ".......",
+    "type": "drink",
+    "price": "2300",
+    "menu": "day"
+  },
+  {
+    "id": "03",
+    "name": "Agua con Gas",
+    "Description": "Agua natural gasificada",
+    "type": "drink",
+    "price": "1200",
+    "menu": "day"
+  },
+  {
+    "id": "04",
+    "name": "Agua sin Gas",
+    "Description": "Agua natural sin gas",
+    "type": "drink",
+    "price": "1200",
+    "menu": "day"
+  },
+  {
+    "id": "05",
+    "name": "Jugo de naranja",
+    "Description": "Jugo natural de naranja",
+    "type": "drink",
+    "price": "2000",
+    "menu": "day"
+  },
+  {
+    "id": "05",
+    "name": "Jugo de Durazno",
+    "Description": "Jugo natural de durazno",
+    "type": "drink",
+    "price": "2000",
+    "menu": "day"
+  },
+  {
+    "id": "06",
+    "name": "Jugo de Fresa",
+    "Description": "Jugo natural de fresa",
+    "type": "drink",
+    "price": "2000",
+    "menu": "day"
+  },
+  {
+    "id": "07",
+    "name": "Jugo de Mango",
+    "Description": "Jugo natural de mango",
+    "type": "drink",
+    "price": "2000",
+    "menu": "day"
+  },
+  {
+    "id": "08",
+    "name": "Bagel",
+    "Description": "Delicioso pan a base de harina de trigo, relleno de queso crema, tomate y jamon de pavo",
+    "type": "breakfast",
+    "price": "3500",
+    "menu": "day"
+  },
+  {
+    "id": "09",
+    "name": "MediaLuna",
+    "Description": "Panes con masa enriquecida con huevo y mantequilla, en forma de media luna y barnizadas con almíbar",
+    "type": "breakfast",
+    "price": "2000",
+    "menu": "day"
+  },
+  {
+    "id": "10",
+    "name": "MediaLuna",
+    "Description": "Panes con masa enriquecida con huevo y mantequilla, en forma de media luna y barnizadas con almíbar",
+    "type": "breakfast",
+    "price": "2000",
+    "menu": "day"
+  },
+  {
+    "id": "11",
+    "name": "Dona Glaseada",
+    "Description": "Deliciosa y esponjosa dona glaseada con azúcar",
+    "type": "breakfast",
+    "price": "1300",
+    "menu": "day"
+  },
+  {
+    "id": "12",
+    "name": "Arepa Catira",
+    "Description": "Arepa rellena con nuestra mechada de pollo y queso mantecoso rallado",
+    "type": "breakfast",
+    "price": "4800",
+    "menu": "day"
+  },
+  {
+    "id": "12",
+    "name": "Arepa Dominó",
+    "Description": "Arepa rellena con nuestros deliciosos porotos negros y queso blanco llanero rallado",
+    "type": "breakfast",
+    "price": "4800",
+    "menu": "day"
+  },
+  {
+    "id": "13",
+    "name": "Arepa con Jamon y Queso",
+    "Description": "Arepa rellena con jamón cocido, queso gouda",
+    "type": "breakfast",
+    "price": "4800",
+    "menu": "day"
+  },
+  {
+    "id": "14",
+    "name": "Empanada de Jamon y Queso",
+    "Description": "Empanadas rellena con jamón cocido, queso gouda",
+    "type": "breakfast",
+    "price": "2700",
+    "menu": "day"
+  },
+  {
+    "id": "15",
+    "name": "Empanada de Mechada",
+    "Description": "Empanadas rellena de nuestra deliciosa mechada de carne al estilo venezolano",
+    "type": "breakfast",
+    "price": "2700",
+    "menu": "day"
+  },
+  {
+    "id": "16",
+    "name": "Empanada de pollo",
+    "Description": "Empanadas rellena de deliciosa mechada de pollo",
+    "type": "breakfast",
+    "price": "2700",
+    "menu": "day"
+  },
+  {
+    "id": "17",
+    "name": "Pizza Peperoni",
+    "Description": "De crujiente masa y horneada en piedra con peperoni y extra de queso mozarella",
+    "type": "lunch",
+    "price": "9000",
+    "menu": "day"
+  },
+  {
+    "id": "18",
+    "name": "Pizza Napolitana",
+    "Description": "De crujiente masa y horneada en piedra con tomate, oregano y extra de queso mozarella",
+    "type": "lunch",
+    "price": "9000",
+    "menu": "day"
+  },
+  {
+    "id": "19",
+    "name": "Pizza Napolitana",
+    "Description": "Es una de las pizzas más demandadas de masa crujiente y esponjosa con una base de queso fundido y tomate que se aliñan con jamón y piña",
+    "type": "lunch",
+    "price": "9800",
+    "menu": "day"
+  },
+  {
+    "id": "20",
+    "name": "Hamburguesa de Vacuno",
+    "Description": "Delicioso sandwich de pan brioche rellena de nuestra sazonada carne de vacuno molida, con tomate, cebolla, pepinillos y queso cheddar",
+    "type": "lunch",
+    "price": "7500",
+    "menu": "day"
+  },
+  {
+    "id": "21",
+    "name": "Hamburguesa de Pollo",
+    "Description": "Delicioso sandwich de pan brioche rellena de pollo con tomate, cebolla, pepinillos y queso cheddar",
+    "type": "lunch",
+    "price": "7500",
+    "menu": "day"
+  },
+  {
+    "id": "22",
+    "name": "Hamburguesa vegana de Seitán",
+    "Description": "El seitán es un excelente alimento rico en proteínas, 0% de colesterol, digestivo y natural. se elabora a base de gluten de trigo, con lechuga y tomate",
+    "type": "lunch",
+    "price": "6000",
+    "menu": "day"
+  }
+]

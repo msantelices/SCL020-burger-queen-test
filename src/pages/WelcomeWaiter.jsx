@@ -6,19 +6,20 @@ import { withRouter } from 'react-router-dom'
 const WelcomeWaiter = ({history}) => {
 
     const goToMakeOrder = ()=>{
-        history.push('/makeorder')
+            history.push('/makeorder');
     }
 
     return (
         <div className='containerbtn'>
-            <div className='btnCheffunction' onClick={()=>goToMakeOrder()} >
-                <img src={ViewOrder} className="sticker-fit" />
-            </div>
-            <div className='textFunctionbtn'>VER PEDIDOS</div>
             <div className='btnCheffunction'>
-                <img src={MakeOrder} className="sticker-fit" />
+                <img src={MakeOrder} className="sticker-fit" onClick={()=>goToMakeOrder()}/>
+                <div className='textFunctionbtn'>REALIZAR PEDIDO</div>
             </div>
-            <div className='textFunctionbtn'>REALIZAR PEDIDO</div>
+            <div className='btnCheffunction' >
+                <img src={ViewOrder} className="sticker-fit" />
+                <div className='textFunctionbtn'>VER PEDIDOS</div>
+            </div>
+            
         </div>
     )
 }

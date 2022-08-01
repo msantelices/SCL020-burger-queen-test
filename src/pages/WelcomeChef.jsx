@@ -13,12 +13,13 @@ const WelcomeChef = ({history}) => {
         <div className='containerbtn'>
             <div className='btnCheffunction'>
                 <img src={ViewOrder} className="sticker-fit" />
+                <div className='textFunctionbtn'>VER PEDIDOS</div>
             </div>
-            <div className='textFunctionbtn'>VER PEDIDOS</div>
             <div className='btnCheffunction' onClick={() => goTOKitchenOrders()}>
                 <img src={InKitchen} className="sticker-fit" />
+                <div className='textFunctionbtn'>EN COCINA</div>
             </div>
-            <div className='textFunctionbtn'>EN COCINA</div>
+            
 
         </div>
     )
