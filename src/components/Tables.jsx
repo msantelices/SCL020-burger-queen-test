@@ -1,20 +1,35 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import { withRouter } from 'react-router-dom'
+
 
 const Tables = ({history}) => {
 
+    // const [tableName, setTableName] = useState([])
+
+    // useEffect(() => {
+    //     localStorage.setItem("tableId", JSON.stringify(tableName));
+    //   }, [tableName]);
+
+
     const goToMenu = () => {
+      
+            // console.log("clickeando");
+            // const getTableId = JSON.parse(localStorage.getItem("tableId"));
+            // console.log("tablename en local", tableName);
+            
+
 
             history.push('/menu')
     }
 
+    
 
 
   return (
     <div className='containerOrder'>
             <div className='textSelectTable'>Selecciona la mesa</div>
             <div className='containerCircles'>
-                <button type="button" className='circleTable boton-color' onClick={()=>goToMenu()} value='1'>
+                <button type="button" className='circleTable boton-color' onClick={()=>goToMenu()}  value='1'>
                     <div className='tableNumbers'>1</div>
                 </button>
                 <button type="button" className='circleTable boton-color'onClick={()=>goToMenu()} value='2'>

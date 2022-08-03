@@ -9,6 +9,7 @@ import WelcomeWaiter from "./pages/WelcomeWaiter";
 import KitchenOrders from "./pages/KitchenOrders";
 import MenuView from "./pages/MenuView";
 import PrivateRoutes from "./components/PrivateRoutes";
+import Orders from "./components/Orders";
 
 
 
@@ -55,6 +56,9 @@ function App() {
           </Route>
           <Route path="/menu">
             <MenuView />
+          </Route>
+          <Route path="/orders">
+            <Orders />
           </Route>
           </PrivateRoutes>
         </Switch>
