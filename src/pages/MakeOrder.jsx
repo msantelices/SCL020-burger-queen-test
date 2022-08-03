@@ -1,10 +1,11 @@
 import React from 'react'
 import Tables from '../components/Tables'
 
-const MakeOrder = () => {
+const MakeOrder = ({setTableRegister}) => {
+    
     return (
         <div className='containerOrder'>
-            <Tables />
+            <Tables setTableRegister={setTableRegister}/>
         </div>
     )
 }

@@ -4,8 +4,10 @@ import { useState, useEffect } from "react";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
 import { withRouter } from 'react-router-dom'
 
-const Menu = ({history}) => {
+const Menu = ({history, setOrders,tableRegister }) => {
   // CONTADOR
+  
+//   console.log('table in menu',tableRegister)
 
   const [menu, setMenu] = useState(menudata);
   
@@ -47,7 +49,8 @@ const Menu = ({history}) => {
     const tableOrder = menu.filter((food)=>{
         return food.count > 0
     })
-    console.log('pedido',tableOrder)
+    setOrders(tableOrder)
+    // console.log('pedido',tableOrder)
     history.push('/orders')
   }
 
@@ -71,7 +74,7 @@ const Menu = ({history}) => {
   return (
     <main className="AllContainerMenu">
       <div className="textMenuMenu">MENU</div>
-      <div className="textTablesMenu"></div>
+      <div className="textTablesMenu">Mesa #{tableRegister}</div>
       <div className="containerMenu">
         <li className="textTypesMenu">Bebidas</li>
         <div className="containerOptionsMenu">

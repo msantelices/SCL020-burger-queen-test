@@ -2,11 +2,12 @@ import React from 'react'
 import Menu from '../components/Menu'
 
 
-const MenuView = () => {
+const MenuView = ({setOrders, tableRegister}) => {
+    // console.log(setOrders)
     return (
         <div className='AllConteinerMenu'>
             
-           <Menu />
+           <Menu setOrders={setOrders} tableRegister={tableRegister} />
             
         </div>
     )
