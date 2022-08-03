@@ -1,4 +1,4 @@
-import React from "react";
+import {useState, useEffect} from "react";
 import { auth, onAuthStateChanged } from "./firebase/init";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Login from "./pages/Login";
@@ -15,12 +15,15 @@ import Orders from "./components/Orders";
 
 function App() {
 
-  const [firebaseUser, setFirebaseUser] = React.useState(false)
+  const [firebaseUser, setFirebaseUser] = useState(false)
+
+  const [orders, setOrders] = useState([])
+  const [tableRegister, setTableRegister] = useState([])
 
   //--Para validar que el usuario este registrado cuando se carga la pagina
-  React.useEffect(() => {
+  useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log(user)
+      // console.log(user)
       if (user) {
         setFirebaseUser(user)
       } else {
@@ -46,7 +49,7 @@ function App() {
             <WelcomeChef />
           </Route>
           <Route path="/makeorder">
-            <MakeOrder />
+            <MakeOrder setTableRegister={setTableRegister}/>
           </Route>
           <Route path="/welcomewaiter">
             <WelcomeWaiter />
@@ -55,10 +58,10 @@ function App() {
             <KitchenOrders />
           </Route>
           <Route path="/menu">
-            <MenuView />
+            <MenuView setOrders={setOrders} tableRegister={tableRegister} />
           </Route>
           <Route path="/orders">
-            <Orders />
+            <Orders orders={orders} tableRegister={tableRegister}/>
           </Route>
           </PrivateRoutes>
         </Switch>
