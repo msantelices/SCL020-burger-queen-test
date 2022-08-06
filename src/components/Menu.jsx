@@ -4,28 +4,28 @@ import { useState, useEffect } from "react";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
 import { withRouter } from 'react-router-dom'
 
-const Menu = ({history, setOrders,tableRegister }) => {
+const Menu = ({ history, setOrders, tableRegister }) => {
   // CONTADOR
-  
-//   console.log('table in menu',tableRegister)
+
+  //   console.log('table in menu',tableRegister)
 
   const [menu, setMenu] = useState(menudata);
-  
 
 
 
-    //usamos el useEffet para indicar que tiene que hacer algo el componente luego del render
-    // en este caso usamos local store.SetItem para guardar la data
+
+  //usamos el useEffet para indicar que tiene que hacer algo el componente luego del render
+  // en este caso usamos local store.SetItem para guardar la data
   useEffect(() => {
     localStorage.setItem("menu", JSON.stringify(menu));
   }, [menu]);
 
 
-    //Creamos la funcion de nuestro onclick pasandole parametros y traaemos la data del locas store
-    //luego validamos si nuestro ID del menu.json y el ID de la comida del boton click coinciden
-   const updateMenuSelected = (foodId, updateCount) => {
+  //Creamos la funcion de nuestro onclick pasandole parametros y traaemos la data del locas store
+  //luego validamos si nuestro ID del menu.json y el ID de la comida del boton click coinciden
+  const updateMenuSelected = (foodId, updateCount) => {
     // console.log("clickeando");
-   const menuFood = JSON.parse(localStorage.getItem("menu"));
+    const menuFood = JSON.parse(localStorage.getItem("menu"));
     // console.log("Menu after LocalStorage", menuFood);
     if (menuFood) {
       const arrayPosition = menuFood.findIndex((food) => {
@@ -44,10 +44,10 @@ const Menu = ({history, setOrders,tableRegister }) => {
     }
   };
 
-  
-  const finishOrder = ()=>{
-    const tableOrder = menu.filter((food)=>{
-        return food.count > 0
+
+  const finishOrder = () => {
+    const tableOrder = menu.filter((food) => {
+      return food.count > 0
     })
     setOrders(tableOrder)
     // console.log('pedido',tableOrder)
@@ -82,7 +82,7 @@ const Menu = ({history, setOrders,tableRegister }) => {
             return (
               <div className="containerPriceFoodCountMenu" key={food.id}>
                 <div className="textFoodNameMenu">{food.name}</div>
-                <div className="textFoodNameMenu">{food.price}</div>
+                <div className="textFoodNameMenu">{food.price}$</div>
                 <button
                   className="buttonCountMenu"
                   onClick={() => updateMenuSelected(food.id, false)}
@@ -107,7 +107,7 @@ const Menu = ({history, setOrders,tableRegister }) => {
             return (
               <div className="containerPriceFoodCountMenu" key={food.id}>
                 <div className="textFoodNameMenu">{food.name}</div>
-                <div className="textFoodNameMenu">{food.price}</div>
+                <div className="textFoodNameMenu">{food.price}$</div>
                 <button
                   className="buttonCountMenu"
                   onClick={() => updateMenuSelected(food.id, false)}
@@ -132,7 +132,7 @@ const Menu = ({history, setOrders,tableRegister }) => {
             return (
               <div className="containerPriceFoodCountMenu" key={food.id}>
                 <div className="textFoodNameMenu">{food.name}</div>
-                <div className="textFoodNameMenu">{food.price}</div>
+                <div className="textFoodNameMenu">{food.price}$</div>
                 <button
                   className="buttonCountMenu"
                   onClick={() => updateMenuSelected(food.id, false)}
@@ -153,7 +153,7 @@ const Menu = ({history, setOrders,tableRegister }) => {
         </div>
       </div>
       <div className="buttonNextMenu">
-        <button className="btn btn-secondary rounded-pill" onClick={()=>finishOrder()} >SIGUIENTE</button>
+        <button className="btn btn-secondary rounded-pill" onClick={() => finishOrder()} >SIGUIENTE</button>
       </div>
     </main>
   );
