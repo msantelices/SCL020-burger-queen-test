@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { createOrders } from '../firebase/firestore';
+import { auth} from '../firebase/init'
+import { withRouter } from 'react-router-dom'
 
 
-const Orders = ({ orders, tableRegister }) => {
+const Orders = ({ history, orders, tableRegister}) => {
+
+
+
 
   // console.log('orders en orders', orders)
 
@@ -13,6 +19,18 @@ const Orders = ({ orders, tableRegister }) => {
     })
     return count
   }
+
+  const saveOrder = async() =>{
+    const currentUser = auth.currentUser.uid
+    const orderDataBase =  await createOrders(currentUser, tableRegister, orders )
+      history.push('/welcomewaiter')
+    
+  }
+
+  const goBack = ()=>{
+    history.push('/welcomewaiter')
+  }
+
 
   return (
     <div className='container'>
@@ -42,12 +60,12 @@ const Orders = ({ orders, tableRegister }) => {
         </div>
       </div>
       <div className='containerAllButtonsOrder'>
-        <button class="btnOrder">Volver atrás</button>
-        <button class="btnOrder">Enviar pedido</button>
+        <button className="btnOrder" onClick={()=>goBack()}>Volver atrás</button>
+        <button className="btnOrder" onClick={()=>saveOrder()} >Enviar pedido</button>
       </div>
     </div>
 
   )
 }
 
-export default Orders
+export default withRouter(Orders)

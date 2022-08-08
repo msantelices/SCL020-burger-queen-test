@@ -10,6 +10,7 @@ import KitchenOrders from "./pages/KitchenOrders";
 import MenuView from "./pages/MenuView";
 import PrivateRoutes from "./components/PrivateRoutes";
 import Orders from "./components/Orders";
+import SeeOrdersChef from "./pages/SeeOrdersChef";
 
 
 
@@ -19,6 +20,7 @@ function App() {
 
   const [orders, setOrders] = useState([])
   const [tableRegister, setTableRegister] = useState([])
+  
 
   //--Para validar que el usuario este registrado cuando se carga la pagina
   useEffect(() => {
@@ -61,7 +63,10 @@ function App() {
             <MenuView setOrders={setOrders} tableRegister={tableRegister} />
           </Route>
           <Route path="/orders">
-            <Orders orders={orders} tableRegister={tableRegister}/>
+            <Orders orders={orders} tableRegister={tableRegister} />
+          </Route>
+          <Route path="/orderschef">
+            <SeeOrdersChef />
           </Route>
           </PrivateRoutes>
         </Switch>
