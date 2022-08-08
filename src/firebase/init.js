@@ -10,6 +10,11 @@ import {
   getFirestore,
   addDoc,
   collection,
+  query,
+  where,
+  getDocs,
+  onSnapshot,
+  orderBy,
 } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js";
 import firebaseConfig from "./firebaseConfig";
 
@@ -21,6 +26,11 @@ export {
   app,
   db,
   auth,
+  query,
+  where,
+  onSnapshot,
+  orderBy,
+  getDocs,
   createUserWithEmailAndPassword,
   addDoc,
   collection,
