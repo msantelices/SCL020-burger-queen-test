@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import { auth, onAuthStateChanged } from "./firebase/init";
+import { auth, onAuthStateChanged, db, collection, onSnapshot } from "./firebase/init";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Login from "./pages/Login";
 import Navbar from './components/Navbar'
@@ -15,9 +15,8 @@ import SeeOrdersChef from "./pages/SeeOrdersChef";
 
 
 function App() {
-
+  const [ordersDb, setOrdersDb] = useState([]);
   const [firebaseUser, setFirebaseUser] = useState(false)
-
   const [orders, setOrders] = useState([])
   const [tableRegister, setTableRegister] = useState([])
   
@@ -34,13 +33,28 @@ function App() {
     });
   }, [])
 
+
+  //---- getorders
+
+  useEffect(()=>{
+   
+      onSnapshot(collection(db, "orders"), (snapshot) => {
+        setOrdersDb(
+          snapshot.docs.map((doc) => {
+            return doc.data();
+          })
+        );
+      });
+    
+  },[])
+
   //---Se valida si el usuario es el curren user, muestra las rutas, de lo contrario muestra que esta cargando la pag
   return firebaseUser !== false ? (
     <Router>
       <div className="container">
         <Navbar firebaseUser={firebaseUser} />
         <Switch>
-        <Route path="/login">
+        <Route path="/login" exact>
             <Login />
           </Route>
             {/* <Route path="/" exact>
@@ -48,7 +62,7 @@ function App() {
       </Route> */}
       <PrivateRoutes>
           <Route path="/welcomechef">
-            <WelcomeChef />
+            <WelcomeChef ordersDb={ordersDb} />
           </Route>
           <Route path="/makeorder">
             <MakeOrder setTableRegister={setTableRegister}/>
@@ -57,7 +71,7 @@ function App() {
             <WelcomeWaiter />
           </Route>
           <Route path="/inkitchen">
-            <KitchenOrders />
+            <KitchenOrders  ordersDb={ordersDb} setOrdersDb={setOrdersDb} />
           </Route>
           <Route path="/menu">
             <MenuView setOrders={setOrders} tableRegister={tableRegister} />
@@ -66,7 +80,7 @@ function App() {
             <Orders orders={orders} tableRegister={tableRegister} />
           </Route>
           <Route path="/orderschef">
-            <SeeOrdersChef />
+            <SeeOrdersChef ordersDb={ordersDb} setOrdersDb={setOrdersDb} />
           </Route>
           </PrivateRoutes>
         </Switch>

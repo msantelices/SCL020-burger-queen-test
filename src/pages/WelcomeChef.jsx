@@ -16,7 +16,7 @@ const WelcomeChef = ({history}) => {
 
     return (
         <div className='containerbtn'>
-            <div className='btnCheffunction' onClick={()=> goToSeeOrders()}>
+            <div className='btnCheffunction' onClick={()=>  goToSeeOrders()}>
                 <img src={ViewOrder} className="sticker-fit" />
                 <div className='textFunctionbtn' >VER PEDIDOS</div>
             </div>

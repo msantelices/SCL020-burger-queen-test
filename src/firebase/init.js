@@ -15,6 +15,8 @@ import {
   getDocs,
   onSnapshot,
   orderBy,
+  Timestamp,
+  updateDoc,
 } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js";
 import firebaseConfig from "./firebaseConfig";
 
@@ -37,4 +39,6 @@ export {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
+  Timestamp,
+  updateDoc,
 };
