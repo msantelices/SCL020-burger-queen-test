@@ -42,7 +42,7 @@ const Navbar = ({history, firebaseUser}) => {
                         firebaseUser !== null ? (
                             <button className="btn btn-light" onClick={() => cerrarSesion()} >Cerrar Sesión</button>
                         ) : (
-                            <NavLink className="btn btn-light mrg-2" to="/login">
+                            <NavLink className="btn btn-light mrg-2" to="/login" exact>
                                 Login
                             </NavLink>
 
