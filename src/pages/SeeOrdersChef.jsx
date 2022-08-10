@@ -1,10 +1,10 @@
 import React from 'react'
 import OrdersChef from '../components/OrdersChef'
 
-const SeeOrdersChef = () => {
+const SeeOrdersChef = ({ordersDb, setOrdersDb}) => {
   return (
     <div>
-        <OrdersChef  />
+        <OrdersChef ordersDb={ordersDb} setOrdersDb={setOrdersDb} />
     </div>
   )
 }
