@@ -5,17 +5,22 @@ import InKitchen from '../stickers/IN-KITCHEN.png'
 
 const WelcomeChef = ({history}) => {
 
-    const goTOKitchenOrders = () => {
+    const goToSeeOrders = ()=>{
+        
+        history.push('/orderschef')
+    }
+
+    const goToKitchenOrders = () => {
         history.push('/inKitchen')
     }
 
     return (
         <div className='containerbtn'>
-            <div className='btnCheffunction'>
+            <div className='btnCheffunction' onClick={()=>  goToSeeOrders()}>
                 <img src={ViewOrder} className="sticker-fit" />
-                <div className='textFunctionbtn'>VER PEDIDOS</div>
+                <div className='textFunctionbtn' >VER PEDIDOS</div>
             </div>
-            <div className='btnCheffunction' onClick={() => goTOKitchenOrders()}>
+            <div className='btnCheffunction' onClick={() => goToKitchenOrders()}>
                 <img src={InKitchen} className="sticker-fit" />
                 <div className='textFunctionbtn'>EN COCINA</div>
             </div>
