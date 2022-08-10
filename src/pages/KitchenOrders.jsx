@@ -1,26 +1,12 @@
-import React, {useEffect} from 'react'
-import { auth, collection, db, getDocs, onSnapshot } from "../firebase/init";
+import React from 'react'
 
-const KitchenOrders = ({ordersDb, setOrdersDb}) => {
+const KitchenOrders = ({orderWithId}) => {
 
-    console.log('in kitchen', ordersDb)
-
-    useEffect(() => {
-        const pepito = getOrders();
-      }, []);
-    
-      const getOrders = () => {
-        onSnapshot(collection(db, "orders"), (snapshot) => {
-          setOrdersDb(
-            snapshot.docs.map((doc) => {
-              return doc.data();
-            })
-          );
-        });
-      };
-
+    console.log('aquiii en kitchen ', orderWithId)
     return (
         <div>
+            <h2>Kitchen orders</h2>
+            <h2>Kitchen orders</h2>
             <h2>Kitchen orders</h2>
             <h2>Kitchen orders</h2>
             <h2>Kitchen orders</h2>

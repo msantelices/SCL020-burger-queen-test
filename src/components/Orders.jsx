@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { createOrders } from '../firebase/firestore';
 import { auth} from '../firebase/init'
 import { withRouter } from 'react-router-dom'
@@ -7,8 +7,7 @@ import { withRouter } from 'react-router-dom'
 const Orders = ({ history, orders, tableRegister}) => {
 
 
-
-
+  
   // console.log('orders en orders', orders)
 
   const totalPrice = () => {
@@ -16,13 +15,18 @@ const Orders = ({ history, orders, tableRegister}) => {
 
     orders.map((food) => {
       count += food.price * food.count
+      return count
     })
-    return count
   }
+
+//   const getFormatCurrency =  (amount) {
+//     return Intl.NumberFormat('es-CL').format(amount).toString();
+// };
+
 
   const saveOrder = async() =>{
     const currentUser = auth.currentUser.uid
-    const orderDataBase =  await createOrders(currentUser, tableRegister, orders )
+    await createOrders(currentUser, tableRegister, orders )
       history.push('/welcomewaiter')
     
   }
