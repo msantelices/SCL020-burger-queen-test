@@ -240,7 +240,7 @@
     height: 350px;
     background-color: #d2d0cd;
     overflow-y: scroll;
-    
+
 }
 
 .containerAllButtonsOrder {
@@ -272,4 +272,71 @@
     border-style: solid;
     text-decoration: none;
     width: 210px;
+}
+
+/*VISTA PEDIDOS CHEF*/
+
+.textOrderChef {
+    /* outline: 2px solid red; */
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 7%;
+}
+
+.containerOrderChefBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    /* outline: 2px solid red; */
+    font-size: 200%;
+    margin: 5%;
+    width: 500px;
+    font-weight: bolder;
+    background-color: #d2d0cd;
+    border-radius: 5%;
+}
+
+.containerAllButtonsOrderChef {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.tableOrderChef {
+    /* outline: 2px solid red; */
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.containerAlltextOrderItemsChef {
+    overflow-y: scroll;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7%;
+    /* margin-right: 7%; */
+    /* outline: 2px solid red; */
+}
+
+.containerAllButtonsOrderChef {
+    margin-block-end: 5%;
+}
+
+.allContainerOrderChef {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-items: left;
+    /* outline: 2px solid red; */
+}
+
+.textOrderOrdersCHEF {
+    font-size: 50px;
 }
