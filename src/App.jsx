@@ -62,7 +62,7 @@ function App() {
     );
   }, [ordersDb]);
 
-  // console.log("aquiiiii", orderWithId);
+  
 
   //---Se valida si el usuario es el curren user, muestra las rutas, de lo contrario muestra que esta cargando la pag
   return firebaseUser !== false ? (
@@ -73,9 +73,7 @@ function App() {
           <Route path="/login" exact>
             <Login />
           </Route>
-          {/* <Route path="/" exact>
-        inicio...
-      </Route> */}
+
           <PrivateRoutes>
             <Route path="/welcomechef">
               <WelcomeChef orderWithId={orderWithId} />
