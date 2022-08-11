@@ -2,7 +2,7 @@ import React from 'react'
 import { createOrders } from '../firebase/firestore';
 import { auth} from '../firebase/init'
 import { withRouter } from 'react-router-dom'
-
+import {getFormatCurrency} from '../utils/transformcurrency'
 
 const Orders = ({ history, orders, tableRegister}) => {
 
@@ -12,16 +12,13 @@ const Orders = ({ history, orders, tableRegister}) => {
 
   const totalPrice = () => {
     let count = 0;
-
+// console.log('entre')
     orders.map((food) => {
       count += food.price * food.count
       return count
     })
+    return getFormatCurrency(count)
   }
-
-//   const getFormatCurrency =  (amount) {
-//     return Intl.NumberFormat('es-CL').format(amount).toString();
-// };
 
 
   const saveOrder = async() =>{
@@ -53,7 +50,7 @@ const Orders = ({ history, orders, tableRegister}) => {
                 <div className='containertextOrderItems'>
                   <div>{food.name}</div>
                   <div>{food.count}</div>
-                  <div>{food.price}$</div>
+                  <div>{getFormatCurrency(food.price)}$</div>
                 </div>
               </div>
             );
