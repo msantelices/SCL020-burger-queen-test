@@ -1,18 +1,18 @@
 import React from 'react'
 import { createOrders } from '../firebase/firestore';
-import { auth} from '../firebase/init'
+import { auth } from '../firebase/init'
 import { withRouter } from 'react-router-dom'
-import {getFormatCurrency} from '../utils/transformcurrency'
+import { getFormatCurrency } from '../utils/transformcurrency'
 
-const Orders = ({ history, orders, tableRegister}) => {
+const Orders = ({ history, orders, tableRegister }) => {
 
 
-  
+
   // console.log('orders en orders', orders)
 
   const totalPrice = () => {
     let count = 0;
-// console.log('entre')
+    // console.log('entre')
     orders.map((food) => {
       count += food.price * food.count
       return count
@@ -21,14 +21,14 @@ const Orders = ({ history, orders, tableRegister}) => {
   }
 
 
-  const saveOrder = async() =>{
+  const saveOrder = async () => {
     const currentUser = auth.currentUser.uid
-    await createOrders(currentUser, tableRegister, orders )
-      history.push('/welcomewaiter')
-    
+    await createOrders(currentUser, tableRegister, orders)
+    history.push('/welcomewaiter')
+
   }
 
-  const goBack = ()=>{
+  const goBack = () => {
     history.push('/welcomewaiter')
   }
 
@@ -61,8 +61,8 @@ const Orders = ({ history, orders, tableRegister}) => {
         </div>
       </div>
       <div className='containerAllButtonsOrder'>
-        <button className="btnOrder" onClick={()=>goBack()}>Volver atrás</button>
-        <button className="btnOrder" onClick={()=>saveOrder()} >Enviar pedido</button>
+        <button className="btnOrder" onClick={() => goBack()}>Volver atrás</button>
+        <button className="btnOrder" onClick={() => saveOrder()} >Enviar pedido</button>
       </div>
     </div>
 
