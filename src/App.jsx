@@ -17,6 +17,7 @@ import MenuView from "./pages/MenuView";
 import PrivateRoutes from "./components/PrivateRoutes";
 import Orders from "./components/Orders";
 import SeeOrdersChef from "./pages/SeeOrdersChef";
+import SeeOrdersWaiter from "./pages/SeeOrdersWaiter";
 
 function App() {
   const [ordersDb, setOrdersDb] = useState([]);
@@ -70,7 +71,7 @@ function App() {
       <div className="container">
         <Navbar firebaseUser={firebaseUser} />
         <Switch>
-          <Route path="/login" exact>
+          <Route path="/" exact>
             <Login />
           </Route>
 
@@ -95,6 +96,9 @@ function App() {
             </Route>
             <Route path="/orderschef">
               <SeeOrdersChef orderWithId={orderWithId} setOrdersDb={setOrdersDb} />
+            </Route>
+            <Route path="/orderswaiter">
+              <SeeOrdersWaiter orderWithId={orderWithId} setOrdersDb={setOrdersDb} />
             </Route>
           </PrivateRoutes>
         </Switch>
